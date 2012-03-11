@@ -1,0 +1,237 @@
+@import "compass";
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('fonts/League_Gothic-webfont.eot');
+    src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/League_Gothic-webfont.woff') format('woff'),
+         url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('fonts/League_Gothic-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin leagueGothicHeader($size, $spacing) {
+  text-transform: uppercase;
+  font-family: 'LeagueGothicRegular', arial, helvetica, san-serif;
+  font-size: $size;
+  letter-spacing: $spacing;
+  font-weight: normal;
+}
+
+$link-color:         #0388a6;
+$link-hover-color:   #009ce0;
+$link-focus-color:   false;
+$link-active-color:  false;
+$link-visited-color: false;
+
+$font-color:  #2a2a2a;
+$font-family: helvetica, arial, sans-serif;
+$base-font-size:   12px;
+$base-line-height: 18px;
+
+$total-cols: 12;
+$col-width: 4em;
+$gutter-width: 1em;
+$side-gutter-width: $gutter-width;
+
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+
+p { margin-bottom: 20px; }
+em { font-style: italic; }
+
+html { -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: $font-family;
+  color: #f3f3f3;
+  background-color: black;
+  line-height: 21px;
+}
+
+a, a:visited, a:hover, a:active { color: white; cursor: pointer; }
+a {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  text-transform: uppercase;
+  &:hover {
+    border: none;
+  }
+}
+
+#main {
+  margin: 0 auto 50px;
+  padding: 50px 25px 25px;
+  width: 1000px;
+  font-family: tahoma;
+}
+
+#heading {
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+
+
+  #logo { float: left; }
+  a#logo, a#logo:hover {
+    border:none;
+    text-decoration:none;
+  }
+
+  #nav {
+    float: right;
+    margin-top: 30px;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin-left: 15px;
+      a {
+        font-weight: normal;
+        font-size: 21px;
+        border-bottom: none;
+        &:hover { border-bottom: 1px solid white; }
+      }
+    }
+  }
+}
+
+.divide {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+  display:block;
+}
+.margin-top {
+  margin-top: 20px;
+}
+
+#featured-content {
+  margin-top: 20px;
+  #iframe { display:none; }
+}
+
+#trailer-link {
+  width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  a {
+    border-bottom: 1px solid white;
+    font-size:21px;
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+#footer {
+  margin-top: 40px;
+  border-top: 1px solid white;
+  padding: 10px 0;
+
+  .social {
+    float: left;
+    a, a:hover { border: none; }
+    img {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+  .notify {
+    float: right;
+    display: inline-block;
+    form { display: inline-block; }
+    label, input { display: inline-block; }
+    label {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    input#email {
+      position:relative;
+      top: -3px;
+      width: 250px;
+      height: 10px;
+      color: black;
+    }
+    input#subscribe {
+      position: relative;
+      top: -3px;
+      margin-left: 5px;
+      padding: 2px;
+      width: 100px;
+      height: 17px;
+      border: none;
+      background-color: #7e8083;
+      color: white
+    }
+    a {
+      font-size: 19px;
+      margin-left: 15px;
+    }
+  }
+}
+
+.about-headline {
+  font-size: 16px;
+}
+
+#about-container {
+  a {
+    text-transform: none;
+  }
+  .extra-margin-top {
+    margin-top: 50px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 19px;
+    text-transform: uppercase;
+  }
+  #about-content {
+    width: 440px;
+    margin-top: 20px;
+    padding-right: 0px;
+    float: left;
+    padding-bottom: 50px;
+  }
+  #india {
+    width: 450px;
+    margin-top: 20px;
+    float: right;
+    padding-bottom: 50px;
+  }
+
+  #meet-the-gang {
+    margin-top: 60px;
+  }
+
+}
+
+
+.episode-row {
+  margin-bottom: 30px;
+  .episode {
+    width: 320px;
+    margin-right: 20px;
+    float: left;
+    .number {
+      position: absolute;
+      display: inline;
+      width: 320px;
+      height: 179;
+      margin-top: 80px;
+      text-align: center;
+      @include leagueGothicHeader(60px, 2px);
+      font-weight: bold;
+      z-index: 20;
+    }
+    img { margin-bottom: 6px; }
+    h5 {
+      text-transform: uppercase;
+      @include leagueGothicHeader(20px, 3px);
+    }
+  }
+  .no-right-margin { margin-right: 0 }
+}

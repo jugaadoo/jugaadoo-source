@@ -1,0 +1,12 @@
+#footer.clearfix
+  .social
+    = link_to facebook_url do
+      = image_tag "facebook.png", :width => "20", :height => "20", :alt => "Facebook", :title => "Like us on Facebook"
+
+    = link_to twitter_url do
+      = image_tag "twitter.png", :width => "20", :height => "20", :alt => "Twitter", :title => "Follow us on Twitter"
+
+  .notify
+    =# partial 'partials/subscribe_form'
+
+    = link_to "get notified", mc_subscribe_link, :class => "upcase-undrlne"

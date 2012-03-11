@@ -1,0 +1,30 @@
+!!! 5
+= partial "partials/ie_classes"
+%head
+  %meta{ :charset => "utf-8" }
+  %meta{ :content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible" }
+
+  = yield_content :head
+
+  %link{ :href => "/stylesheets/reset.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
+
+  = stylesheet_link_tag "site.css"
+
+%body{ :class => page_classes.to_s }
+
+  %div{:id => "main", :role => "main" }
+
+    #heading.clearfix
+      %a{ :href => root_url, :class => "float-left", :id => "logo" }
+        = image_tag "jugaadoo_logo.png", :width => "225px", :height => "53", :alt => "Jugaadoo Logo"
+
+      %ul#nav
+        %li= link_to "Episodes", episodes_url
+        %li= link_to "About", about_url
+
+    = yield
+
+    = partial "partials/footer"
+    = partial "partials/javascripts"
+
+= "</html>"

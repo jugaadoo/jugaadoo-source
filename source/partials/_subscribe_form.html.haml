@@ -1,0 +1,8 @@
+/ Mail Chimp form
+-#
+  .mc_embed_signup
+    %form{ :action => "http://jugaadoo.us2.list-manage.com/subscribe/post", :method => "post", :id => "mc-embedded-subscribe-form", :name => "mc-embedded-subscribe-form", :class => "validate", :target => "_blank" }
+      %label{ :for => "email" } get notified:
+      %input{ :type => "text", :value => "", :name => "email", :id => "email" }
+      <input type="submit" value="Subscribe" id="subscribe" name="subscribe">
+    -#%input{ :type => "submit", :value => "Subscribe", :name => "subscribe", :id => "subscribe" }
